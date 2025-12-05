@@ -1,0 +1,243 @@
+/* =========================================
+   Global Styles
+   ========================================= */
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* =========================================
+   Navigation Bar
+   ========================================= */
+nav {
+  background-color: #111;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar li {
+  margin: 0 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 15px 10px;
+  display: inline-block;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #00ffea;
+  border-bottom: 2px solid #00ffea;
+}
+
+/* =========================================
+   Homepage Content
+   ========================================= */
+main.home-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+main.home-content h1 {
+  font-size: 48px;
+  color: #00ffea;
+  margin-bottom: 20px;
+}
+
+main.home-content p {
+  max-width: 700px;
+  font-size: 20px;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #00ffea;
+  color: black;
+  font-weight: bold;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #00c9b7;
+  transform: scale(1.05);
+}
+
+/* =========================================
+   Form Styles
+   ========================================= */
+.form-container {
+  max-width: 400px;
+  margin: 60px auto;
+  background: #111;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 234, 0.3);
+}
+
+.form-container h1 {
+  text-align: center;
+  color: #00ffea;
+  margin-bottom: 25px;
+}
+
+.form-container label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  background: #222;
+  color: white;
+}
+
+.form-container input:focus {
+  outline: 2px solid #00ffea;
+}
+
+.form-container button {
+  margin-top: 20px;
+  width: 100%;
+}
+
+#message {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* =========================================
+   Input Hints
+   ========================================= */
+.hint {
+  display: block;
+  color: #888;
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+/* =========================================
+   User Info Section (Game Page)
+   ========================================= */
+.user-info {
+  position: fixed;
+  top: 70px;         /* Positioned below the navbar */
+  right: 25px;       /* Aligned to the top-right corner */
+  color: #00ffea;
+  font-size: 14px;
+  text-align: right;
+  z-index: 10;
+}
+
+.small-btn {
+  font-size: 14px;
+  padding: 6px 12px;
+  margin-left: 10px;
+  background-color: #222;
+  border: 1px solid #00ffea;
+  color: #00ffea;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.small-btn:hover {
+  background-color: #00ffea;
+  color: #000;
+}
+
+/* =========================================
+   Game Page
+   ========================================= */
+.game-container {
+  position: absolute;
+  top: 60px; /* Matches navbar height */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevents elements from spilling outside */
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================================
+   Rankings Page
+   ========================================= */
+.rankings-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  min-height: 100vh;
+  color: white;
+}
+
+.rankings-container table {
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 600px;
+  margin-top: 20px;
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.rankings-container th,
+.rankings-container td {
+  text-align: center;
+  padding: 10px;
+}
+
+.rankings-container th {
+  background-color: #00ffea;
+  color: black;
+  font-weight: bold;
+}
+
+.rankings-container tr:nth-child(even) {
+  background-color: #1a1a1a;
+}
+
+

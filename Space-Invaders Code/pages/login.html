@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Space Invaders</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+  <!-- navigation bar -->
+  <nav>
+    <ul class="navbar">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="./game.html">Play Game</a></li>
+      <li><a href="./register.html">Register</a></li>
+      <li><a href="./login.html" class="active">Login</a></li>
+      <li><a href="./rankings.html">Rankings</a></li>
+    </ul>
+  </nav>
+
+  <!-- login form section -->
+  <main class="form-container">
+    <h1>Login</h1>
+
+    <!-- handles user login -->
+    <form id="loginForm">
+      <label>Email Address</label>
+      <input
+        type="email"
+        id="loginEmail"
+        required
+        placeholder="you@example.com"
+      />
+
+      <label>Password</label>
+      <input
+        type="password"
+        id="loginPassword"
+        required
+        placeholder="Enter password"
+      />
+
+      <button type="submit" class="btn">Login</button>
+
+      <!-- displays success or error messages -->
+      <p id="loginMessage"></p>
+    </form>
+  </main>
+
+  <!-- footer section -->
+  <footer>
+    <p>&copy; 2025 Space Invaders Web Game | Created by Mohssine</p>
+  </footer>
+
+  <!-- login script -->
+  <script type="module">
+    import { setupLogin } from "../javascript/auth.mjs";
+    setupLogin();
+  </script>
+</body>
+</html>
+

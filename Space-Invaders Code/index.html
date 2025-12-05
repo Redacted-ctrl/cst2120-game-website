@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Space Invaders - Home</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <!-- navigation bar -->
+  <nav>
+    <ul class="navbar">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="./pages/game.html">Play Game</a></li>
+      <li><a href="./pages/register.html">Register</a></li>
+      <li><a href="./pages/login.html">Login</a></li>
+      <li><a href="./pages/rankings.html">Rankings</a></li>
+    </ul>
+  </nav>
+
+  <!-- homepage content -->
+  <main class="home-content">
+    <h1>Welcome to Space Invaders!</h1>
+    <p>
+      Battle waves of alien invaders in this classic-style space shooter.
+      Use your keyboard to move and shoot. Survive as long as you can and
+      climb the rankings!
+    </p>
+    <a href="./pages/game.html" class="btn">Play Now</a>
+  </main>
+
+  <!-- footer section -->
+  <footer>
+    <p>&copy; 2025 Space Invaders Web Game | Created by Mohssine</p>
+  </footer>
+
+  <!-- handles play button redirect logic -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const playBtn = document.querySelector(".btn") // play now button
+
+      // handles redirect based on login status
+      playBtn.addEventListener("click", (event) => {
+        event.preventDefault() // prevents normal link action
+        const loggedIn = sessionStorage.getItem("loggedInUser")
+
+        if (loggedIn) {
+          // if already logged in → go straight to game
+          window.location.href = "./pages/game.html"
+        } else {
+          // if not logged in → go to login first
+          window.location.href = "./pages/login.html"
+        }
+      })
+    })
+  </script>
+</body>
+</html>
+

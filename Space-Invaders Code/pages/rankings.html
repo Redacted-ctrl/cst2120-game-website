@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rankings - Space Invaders</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+  <!-- navigation bar -->
+  <nav>
+    <ul class="navbar">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="./game.html">Play Game</a></li>
+      <li><a href="./register.html">Register</a></li>
+      <li><a href="./login.html">Login</a></li>
+      <li><a href="./rankings.html" class="active">Rankings</a></li>
+    </ul>
+  </nav>
+
+  <!-- rankings display section -->
+  <main class="rankings-container">
+    <h1>Top Player Rankings</h1>
+
+    <!-- creates the rankings table -->
+    <table id="rankingsTable">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Player</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- filled dynamically by JavaScript -->
+      </tbody>
+    </table>
+  </main>
+
+  <!-- footer section -->
+  <footer>
+    <p>&copy; 2025 Space Invaders Web Game | Created by Mohssine</p>
+  </footer>
+
+  <!-- rankings script -->
+  <script type="module">
+    import { displayRankings } from "../javascript/rankings.mjs";
+    displayRankings();
+  </script>
+</body>
+</html>
+

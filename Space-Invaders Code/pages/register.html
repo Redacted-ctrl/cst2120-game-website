@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - Space Invaders</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+  <!-- navigation bar -->
+  <nav>
+    <ul class="navbar">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="./game.html">Play Game</a></li>
+      <li><a href="./register.html" class="active">Register</a></li>
+      <li><a href="./login.html">Login</a></li>
+      <li><a href="./rankings.html">Rankings</a></li>
+    </ul>
+  </nav>
+
+  <!-- registration form section -->
+  <main class="form-container">
+    <h1>Create Account</h1>
+
+    <!-- handles new user registration -->
+    <form id="registerForm">
+      <label>Full Name</label>
+      <input
+        type="text"
+        id="name"
+        required
+        placeholder="Your name"
+      />
+
+      <label>Email Address</label>
+      <input
+        type="email"
+        id="email"
+        required
+        placeholder="you@example.com"
+      />
+      <small class="hint">Use a valid email format, e.g. name@example.com</small>
+
+      <label>Phone Number</label>
+      <input
+        type="tel"
+        id="phone"
+        required
+        placeholder="07XXXXXXXXX"
+      />
+
+      <label>Password</label>
+      <input
+        type="password"
+        id="password"
+        required
+        placeholder="Enter password"
+      />
+      <small class="hint">At least 8 characters, one uppercase letter, and one number</small>
+
+      <label>Confirm Password</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        required
+        placeholder="Re-enter password"
+      />
+
+      <button type="submit" class="btn">Register</button>
+
+      <!-- displays registration feedback messages -->
+      <p id="message"></p>
+    </form>
+  </main>
+
+  <!-- footer section -->
+  <footer>
+    <p>&copy; 2025 Space Invaders Web Game | Created by Mohssine</p>
+  </footer>
+
+  <!-- registration script -->
+  <script type="module">
+    import { setupRegistration } from "../javascript/auth.mjs";
+    setupRegistration();
+  </script>
+</body>
+</html>
+
